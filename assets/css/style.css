@@ -1,0 +1,578 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller-Regular'),
+    url('../fonts/MullerRegular.woff2') format("woff2"),
+    url('../fonts/MullerRegular.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller-Medium'),
+    url('../fonts/MullerMedium.woff2') format("woff2"),
+    url('../fonts/MullerMedium.woff') format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller-Light'),
+    url('../fonts/MullerLight.woff2') format("woff2"),
+    url('../fonts/MullerLight.woff') format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller-Bold'),
+    url('../fonts/MullerBold.woff2') format("woff2"),
+    url('../fonts/MullerBold.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*Global*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: #E5E5E5;
+    min-width: 1200px;
+    font-family: 'Muller', sans-serif;
+    font-weight: 400;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: 0;
+}
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 30px auto 40px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    margin-left: 40px ;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #333333;
+}
+
+/*header*/
+
+.header {
+    /*padding-top: 30px;*/
+}
+
+.header-contacts {
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-logo {
+    margin-right: 40px;
+}
+
+.header-tel {
+    margin-right: auto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #666666;
+}
+
+.header-login {
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #CC9933;
+    background-image: url("../img/header-arrow.svg");
+    background-position: left center;
+    background-size: 21px 12px;
+    background-repeat: no-repeat;
+    padding-left: 28px;
+}
+
+.header-nav {
+    padding: 10px 45px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav-list {
+    /*Если не использовать margin, промежуток неизвестен, поэтому стоит предположительное число. Как орагизовать промежутки незная ширины?)))*/
+    flex-basis: 60%;
+    justify-content: space-between;
+}
+
+.header-nav-item-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #666666;
+}
+
+.header-nav-items-block {
+    flex-basis: 40%;
+    justify-content: space-around;
+}
+
+.header-nav-items-btn {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #CC9933;
+
+    padding: 13px 20px;
+    background-color: #fff;
+    border: 1px solid #CC9933;
+    border-radius: 10px;
+}
+
+/*Special offers*/
+
+.special-offers-content {
+    flex-flow: row wrap;
+}
+
+.special-offers-block {
+    flex-flow: column wrap;
+    width: calc((100% - 24px) / 2);
+}
+
+.special-offers-block:not(:last-child) {
+    margin-right: 24px;
+}
+
+.special-offers-item {
+    flex: 1;
+    min-height: 258px;
+    max-width: 573px;
+    margin-bottom: 24px;
+    padding: 40px 45px;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.special-offers-item-maldives {
+    background-image: url("../img/Maldives.png");
+}
+
+.special-offers-item-luxe {
+    background-image: url("../img/luxe.png");
+}
+
+.special-offers-item-krit {
+    background-image: url("../img/krit.png");
+}
+
+.special-offers-item:last-child {
+    margin-bottom: 0;
+}
+
+.specials-offers-item-text {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+.special-offers-item-coast {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.special-offers-item-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #F0BF5F;
+    background-image: url("../img/podrobnee.svg");
+    background-position: right center;
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    padding-right: 15px;
+}
+
+
+.block-luxe {
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/*About Us*/
+
+.about-us-text {
+    max-width: 75%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #000000;
+}
+
+/*Services*/
+
+.services-list {
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.services-list-item {
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    flex-basis: 49%;
+    min-height: 330px;
+    padding: 26px 45px;
+
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: 15px;
+}
+
+.service-1 {
+    background-image: url("../img/services-1.png");
+}
+
+.service-2 {
+    background-image: url("../img/services-2.png");
+}
+
+.service-3 {
+    background-image: url("../img/services-3.png");
+}
+
+.service-4 {
+    background-image: url("../img/services-4.png");
+}
+
+.services-list-item:not(:nth-last-child(-n+2)) {
+    margin-bottom: 24px;
+}
+
+.services-list-item-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 200%;
+    color: #CC9933;
+
+    background-image: url("../img/podrobnee.svg");
+    background-position: right center;
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+
+}
+
+.services-list-item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #000000;
+}
+
+/*Advantages*/
+
+.advantages-list {
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.advantages-list-item {
+    flex-basis: 23.5%;
+    min-height: 276px;
+    padding: 10px 42px 0 45px;
+    background-color: #fff;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.advantages-list-item:not(:nth-last-child(-n+4)) {
+    margin-bottom: 22px;
+}
+
+.advantages-list-item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding-top: 76px ;
+}
+
+.advantages-1 {
+    background-image: url("../img/advantage-1.svg");
+}
+
+.advantages-2 {
+    background-image: url("../img/advantage-2.svg");
+}
+
+.advantages-3 {
+    background-image: url("../img/advantage-3.svg");
+}
+
+.advantages-4 {
+    background-image: url("../img/advantage-4.svg");
+}
+
+.advantages-5 {
+    background-image: url("../img/advantage-5.svg");
+}
+
+.advantages-6 {
+    background-image: url("../img/advantage-6.svg");
+}
+
+.advantages-7 {
+    background-image: url("../img/advantage-7.svg");
+}
+
+.advantages-8 {
+    background-image: url("../img/advantage-8.svg");
+}
+
+/*Placement*/
+
+.placement-list {
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.placement-list-item {
+    flex-basis: 32%;
+    min-height: 440px;
+    background-color: #fff;
+    border-radius: 15px;
+    align-items: flex-end;
+}
+
+.placement-list-item:not(:nth-last-child(-n+3)) {
+    margin-bottom: 24px;
+}
+
+.placement-list-item-article {
+    padding: 10px 45px;
+}
+
+.placement-list-item-img {
+
+}
+
+.placement-list-item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.placement-list-item-text-black {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000;
+}
+
+.placement-list-item-block {
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.placement-list-item-span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.placement-list-item-score {
+    padding: 18px;
+}
+
+.placement-list-item-btn {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #CC9933;
+    background-color: #ffffff;
+    border: 1px solid #CC9933;
+    border-radius: 10px;
+    padding: 13px 20px;
+}
+
+/*////////////////////////*/
+
+/*Размещение*/
+.placement-list-item:last-child {
+    background-image: url("../img/placement-9.png");
+    background-repeat: no-repeat;
+}
+
+/*footer*/
+
+.footer {
+    width: 100%;
+    padding: 0 15px 0;
+    margin: 0 auto 30px;
+}
+button{
+    background-color: #00ff00 ;
+    border: 0px;
+    border-radius: 10px;
+}
+#State{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    height: 100px;
+    width: 1600px;
+
+}
+ul{
+    list-style-type: none;
+
+}
+img{
+    max-height: 100px;
+    max-width: 100px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+img{
+    justify-content: flex-start;
+
+}
+p{
+    justify-content: flex-end;
+}
+
+
+
+ input{
+     background-color: white;
+     border: 0px;
+     border-radius: 20px;
+ }
+
+
+li{
+    padding-top: 10px;
+
+}
+#States{
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+
+}
+#State {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    height: 100px;
+    width: 1600px;
+}
+
+#State1{
+     background-color: #FFFFFF;
+     border-radius: 30px;
+     height: 100px;
+     width: 1600px;
+
+ }
+#State2{
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    height: 100px;
+    width: 1600ppx;
+
+}
+#State3 {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    height: 100px;
+    width: 1600px;
+}
+#state5{
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    height: 200px;
+    width: 1600px;
+}
+
+
+.container{
+    display: flex;
+
+
+}
+.TextS{
+    padding-left: 100px;
+    padding-top: 20px;
+
+}
+P{
+    padding-left: 50px;
+}
+#State3>img{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+body{
+    justify-content: center;
+}
+#logo>img{
+    border-radius:500px ;
+}
+
